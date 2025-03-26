@@ -18,4 +18,4 @@ Lumé es una tienda interactiva que permite a los usuarios explorar y comprar ar
 - Carrito de compras funcional con calculo de envio.
 
 ### Diseño del Proyecto
-[Enlace a prototipo en Figma](https://www.figma.com/design/V3ENwgheknL5hVJ7OYs61w/Lum%C3%A9?node-id=0-1&t=IipClJh0qxU06lQl-1)
+[Enlace a prototipo en Figma](https://www.figma.com/proto/1DMyZEDTDHlGbTCQqbJ9tt/Untitled?node-id=1-2&t=brRzXRsrkXOl9VWp-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)
