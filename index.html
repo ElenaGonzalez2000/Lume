@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumé</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Lumé</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Aca va a ir el menu "hamburguesa" para versiones mobiles -->
+        <!-- Aca va a ir el offcanvas de Bootstrap para el carrito -->
+    </header>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <h2>¿No conoces tu tipo de piel?</h2>
+            <p>
+                Nuestro test puede ayudarte a encontrar los mejores productos para tu
+                piel
+            </p>
+            <button class="hero-btn">Hacer Test</button>
+        </section>
+
+        <!-- Filtros -->
+        <aside>
+            <h2>Filtros</h2>
+            <div>
+                <h3>Tipo de piel</h3>
+                <span>Piel seca</span>
+                <span>Piel mixta</span>
+                <span>Piel grasa</span>
+                <span>Piel sencible</span>
+            </div>
+            <div>
+                <h3>Tipo de producto</h3>
+                <span>Limpiadores</span>
+                <span>Hidratantes</span>
+                <span>Protectores solares</span>
+            </div>
+            <div>
+                <h3>Marca</h3>
+                <span>The Ordinary</span>
+                <span>Cerave</span>
+                <span>La Roche Posay</span>
+                <span>Neutrogena</span>
+            </div>
+            <div>
+                <h3>Precio</h3>
+                <span>Menor a $5000</span>
+                <span>$5000 - $10000</span>
+                <span>$10000 - $20000</span>
+                <span>Mayor a $20000</span>
+            </div>
+        </aside>
+
+        <!-- Barra de busqueda ir ordenamiento de productos -->
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos" />
+            <button>Buscar</button>
+
+            <span>Ordenar: Menor a Mayor</span>
+            <span>Ordenar: Mayor a Menor</span>
+        </div>
+
+        <!-- Productos -->
+        <section class="productos-box"></section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <p>
+                ¿Te gustaria recibir nuestras ultimas novedades? Suscribite a nuestro
+                newsletter
+            </p>
+            <form action="">
+                <input type="email" placeholder="Email" />
+                <button>Suscribirme</button>
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
