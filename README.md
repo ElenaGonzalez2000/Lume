@@ -1,9 +1,9 @@
 # Lume - Proyecto Universitario
-Materia: Programación Web I.
-Profesor: Matias Velazquez.
-Alumno: Elena Gonzalez.
-Cuatrimestre y año: 1er Cuatrimestre, 2025.
-
+Materia: Programación Web I.  
+Profesor: Matias Velazquez.  
+Alumno: Elena Gonzalez.  
+Cuatrimestre y año: 1er Cuatrimestre, 2025.  
+  
 Lumé es una tienda interactiva que permite a los usuarios explorar y comprar articulos de limpieza y cuidado facil de forma intuitiva y eficiente.
 
 ## Objetivos del Proyecto
