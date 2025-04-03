@@ -1,6 +1,6 @@
 # Lume - Proyecto Universitario
 Materia: Programación Web I.  
-Profesor: Matias Velazquez.  
+Profesor: Matias Velasquez.  
 Alumno: Elena Gonzalez.  
 Cuatrimestre y año: 1er Cuatrimestre, 2025.  
   
