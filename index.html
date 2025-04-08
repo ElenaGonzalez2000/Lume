@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lumé</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- fuente de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-    <header>
-        <h1 class="logo">Lumé</h1>
-        <nav>
-            <ul>
+    <header class="header">
+        <h1 class="header-logo">LUMÉ</h1>
+        <nav class="header-nav">
+            <ul class="header-nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -32,53 +37,69 @@
             <button class="hero-btn">Hacer Test</button>
         </section>
 
-        <!-- Filtros -->
-        <aside>
-            <h2>Filtros</h2>
-            <div>
-                <h3>Tipo de piel</h3>
-                <span>Piel seca</span>
-                <span>Piel mixta</span>
-                <span>Piel grasa</span>
-                <span>Piel sensible</span>
-            </div>
-            <div>
-                <h3>Tipo de producto</h3>
-                <span>Limpiadores</span>
-                <span>Hidratantes</span>
-                <span>Protectores solares</span>
-            </div>
-            <div>
-                <h3>Marca</h3>
-                <span>The Ordinary</span>
-                <span>Cerave</span>
-                <span>La Roche Posay</span>
-                <span>Neutrogena</span>
-            </div>
-            <div>
-                <h3>Precio</h3>
-                <span>Menor a $5000</span>
-                <span>$5000 - $10000</span>
-                <span>$10000 - $20000</span>
-                <span>Mayor a $20000</span>
-            </div>
-        </aside>
+        <div class="contenedor-productos">
+            <aside class="productos-filtros">
+                <h2>Filtros</h2>
+                <div class="filtros-box">
+                    <h3>Tipo de piel</h3>
+                    <button>Piel seca</button>
+                    <button>Piel mixta</button>
+                    <button>Piel grasa</button>
+                    <button>Piel sensible</button>
+                    <button>Piel normal</button>
+                    <button>Piel acneica</button>
+                    <button>Piel con rosácea</button>
+                    <button>Piel con manchas</button>
+                </div>
+                <div class="filtros-box">
+                    <h3>Tipo de producto</h3>
+                    <button>Limpiadores</button>
+                    <button>Hidratantes</button>
+                    <button>Protectores solares</button>
+                    <button>Exfoliantes</button>
+                    <button>Serums</button>
+                    <button>Mascarillas</button>
+                </div>
+                <div class="filtros-box">
+                    <h3>Marca</h3>
+                    <button>The Ordinary</button>
+                    <button>Cerave</button>
+                    <button>La Roche Posay</button>
+                    <button>Neutrogena</button>
+                    <button>Skin1004</button>
+                    <button>Isdin</button>
+                    <button>Tocobo</button>
+                </div>
+                <div class="filtros-box">
+                    <h3>Precio</h3>
+                    <button>Menor a $5000</button>
+                    <button>$5000 - $10000</button>
+                    <button>$10000 - $20000</button>
+                    <button>Mayor a $20000</button>
+                </div>
+            </aside>
 
-        <!-- Barra de busqueda y ordenamiento de productos -->
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar productos" />
-            <button>Buscar</button>
+            <!-- Barra de busqueda y ordenamiento de productos -->
+            <div class="productos-busqueda">
+                <input type="text" placeholder="Buscar productos" />
+                <button>Buscar</button>
 
-            <span>Ordenar: Menor a Mayor</span>
-            <span>Ordenar: Mayor a Menor</span>
+                <button>Ordenar: Menor a Mayor</button>
+                <button>Ordenar: Mayor a Menor</button>
+            </div>
+
+            <!-- Productos -->
+            <section class="productos-box"></section>
         </div>
-
-        <!-- Productos -->
-        <section class="productos-box"></section>
+        <!-- Filtros -->
 
         <section class="tabla-ingredientes">
-            <img src="./images/skin1004-ampoule-serum-100ml-poremizing-fresh-ampoule-38409159966966.jpg" alt="imagen de referencia de producto Skin1004"/>
-            <p>Nuestros productos contienen ingredientes naturales con múltiples beneficios para la piel. Aquí tienes un resumen de sus propiedades:</p>
+            <img src="./images/skin1004-ampoule-serum-100ml-poremizing-fresh-ampoule-38409159966966.jpg"
+                alt="imagen de referencia de producto Skin1004" />
+            <p>
+                Nuestros productos contienen ingredientes naturales con múltiples
+                beneficios para la piel. Aquí tienes un resumen de sus propiedades:
+            </p>
 
             <table>
                 <thead>
