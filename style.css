@@ -3,7 +3,7 @@
 :root {
   --color-fondo: #ffffff;
   --color-principal: #7b3f3f;
-  --color-boton: #6A8F7A;
+  --color-boton: #6a8f7a;
   --color-texto-secundario: #4a4a4a;
   --color-fondo-secundario: #f5f5f5;
   --color-borde-suave: #d9d9d9;
@@ -16,12 +16,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--fuente-prinicipal);
 }
 
 body {
-  font-family: var(--fuente-prinicipal);
   background-color: var(--color-fondo);
   color: var(--color-texto-secundario);
+}
+
+/* BOTON PRIMARIO */
+
+.btn-primario {
+  background-color: var(--color-boton);
+  color: var(--color-fondo-secundario);
+  font-family: var(--fuente-prinicipal);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: ease-in-out 0.3s;
+}
+
+.btn-primario:hover {
+  background-color: var(--color-principal);
+  color: var(--color-fondo-secundario);
 }
 
 /*        HEADER           */
@@ -90,23 +109,6 @@ body {
   font-weight: 600;
 }
 
-.hero-btn,
-.newsletter button {
-  background-color: var(--color-boton);
-  color: var(--color-fondo-secundario);
-  font-family: var(--fuente-prinicipal);
-  padding: 10px 20px;
-  border: none;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  cursor: pointer;
-  border-radius: 5px;
-  transition: ease-in-out 0.3s;
-}
-
-.hero-btn:hover,
-.newsletter button:hover {
-  background-color: var(--color-principal);
-}
 
 /*     PRODUCTOS      */
 
@@ -260,23 +262,6 @@ body {
   text-align: center;
 }
 
-/* ESTILOS DEL MODAL DE TEST */
-
-.modal .btn,
-.productos-container .btn {
-  background-color: var(--color-principal);
-  color: var(--color-fondo-secundario);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: ease-in-out 0.3s;
-}
-
-.modal .btn:hover,
-.productos-container .btn:hover {
-  background-color: var(--color-boton);
-}
 
 /*    CARRITO     */
 
@@ -324,7 +309,7 @@ button.btn-vaciarCarrito:hover {
   border: 1px solid red;
 }
 
-button.btn-iniciarCompra {
+/* button.btn-iniciarCompra {
   background-color: var(--color-boton);
   color: var(--color-fondo);
   border: none;
@@ -332,12 +317,12 @@ button.btn-iniciarCompra {
   border-radius: 5px;
   cursor: pointer;
   transition: ease-in-out 0.3s;
-}
+} */
 
-button.btn-iniciarCompra:hover {
+/* button.btn-iniciarCompra:hover {
   background-color: var(--color-principal);
   color: var(--color-fondo-secundario);
-}
+} */
 
 /*      MEDIA QUERIES      */
 
