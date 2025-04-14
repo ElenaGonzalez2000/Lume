@@ -260,6 +260,25 @@ body {
   text-align: center;
 }
 
+
+/* ESTILOS DEL MODAL DE TEST */
+
+.modal .btn, .productos-container .btn {
+  background-color: var(--color-principal);
+  color: var(--color-fondo-secundario);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+.modal .btn:hover, .productos-container .btn:hover {
+  background-color: var(--color-boton);
+}
+
+
+
 /*      MEDIA QUERIES      */
 
 @media (max-width: 992px) {
