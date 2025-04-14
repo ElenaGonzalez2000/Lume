@@ -373,7 +373,7 @@ button.btn-vaciarCarrito:hover {
   }
 
   .nav .nav-list {
-    flex-direction: column !important;
+    flex-direction: column;
   }
 }
 
@@ -391,7 +391,6 @@ button.btn-vaciarCarrito:hover {
   justify-content: center;
   border-radius: 50%;
   transition: background-color 0.3s;
-  top: 30px !important;
 }
 
 #btn-carrito:hover {
