@@ -36,9 +36,10 @@ body {
   position: relative;
 }
 
-.header-logo {
+.header-logo a {
   color: var(--color-principal);
   z-index: 1;
+  text-decoration: none;
 }
 
 .nav-list {
@@ -61,7 +62,7 @@ body {
   border-bottom: solid 3px var(--color-principal);
 }
 
-#btn-burger{
+#btn-burger {
   border: none;
 }
 
@@ -234,7 +235,6 @@ body {
   background-color: var(--color-fondo);
 }
 
-
 /*        NEWSLETTER       */
 
 .newsletter {
@@ -260,10 +260,10 @@ body {
   text-align: center;
 }
 
-
 /* ESTILOS DEL MODAL DE TEST */
 
-.modal .btn, .productos-container .btn {
+.modal .btn,
+.productos-container .btn {
   background-color: var(--color-principal);
   color: var(--color-fondo-secundario);
   border: none;
@@ -273,11 +273,71 @@ body {
   transition: ease-in-out 0.3s;
 }
 
-.modal .btn:hover, .productos-container .btn:hover {
+.modal .btn:hover,
+.productos-container .btn:hover {
   background-color: var(--color-boton);
 }
 
+/*    CARRITO     */
 
+.carrito-item {
+  min-height: 130px;
+}
+
+.carrito-img-wrapper {
+  width: 100px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.carrito-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0px 10px 10px 0px;
+  display: block;
+}
+
+input.form-control {
+  border: 1px solid var(--color-texto-secundario);
+}
+input.form-control:focus {
+  border-color: var(--color-texto-secundario);
+  box-shadow: none;
+}
+button.btn-calcularEnvio {
+  border: 1px solid var(--color-texto-secundario);
+  color: var(--color-principal);
+  font-weight: bold;
+}
+button.btn-calcularEnvio:hover {
+  border: 1px solid var(--color-texto-secundario);
+  background-color: var(--color-boton);
+  color: var(--color-fondo);
+}
+
+button.btn-vaciarCarrito {
+  margin-bottom: 10px;
+}
+
+button.btn-vaciarCarrito:hover {
+  border: 1px solid red;
+}
+
+button.btn-iniciarCompra {
+  background-color: var(--color-boton);
+  color: var(--color-fondo);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+button.btn-iniciarCompra:hover {
+  background-color: var(--color-principal);
+  color: var(--color-fondo-secundario);
+}
 
 /*      MEDIA QUERIES      */
 
@@ -305,7 +365,7 @@ body {
     gap: 10px;
   }
 
-  .newsletter form{
+  .newsletter form {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -328,7 +388,7 @@ body {
   }
 
   .nav .nav-list {
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
 }
 
@@ -346,7 +406,7 @@ body {
   justify-content: center;
   border-radius: 50%;
   transition: background-color 0.3s;
-  top: 30px!important;
+  top: 30px !important;
 }
 
 #btn-carrito:hover {
@@ -354,7 +414,6 @@ body {
 }
 
 @media screen and (max-width: 575px) {
-
   .ingredientes-tabla {
     flex-direction: column;
     text-align: center;
