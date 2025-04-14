@@ -309,20 +309,25 @@ button.btn-vaciarCarrito:hover {
   border: 1px solid red;
 }
 
-/* button.btn-iniciarCompra {
-  background-color: var(--color-boton);
+/*       CARRITO BOTON    */
+
+#btn-carrito {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-principal);
   color: var(--color-fondo);
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: ease-in-out 0.3s;
-} */
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
 
-/* button.btn-iniciarCompra:hover {
-  background-color: var(--color-principal);
-  color: var(--color-fondo-secundario);
-} */
+#btn-carrito:hover {
+  background-color: var(--color-boton);
+}
 
 /*      MEDIA QUERIES      */
 
@@ -375,26 +380,6 @@ button.btn-vaciarCarrito:hover {
   .nav .nav-list {
     flex-direction: column;
   }
-}
-
-/*       CARRITO BOTON    */
-
-#btn-carrito {
-  width: 40px;
-  height: 40px;
-  background-color: var(--color-principal);
-  color: var(--color-fondo);
-  border: none;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-#btn-carrito:hover {
-  background-color: var(--color-boton);
 }
 
 @media screen and (max-width: 575px) {
