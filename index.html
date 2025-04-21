@@ -201,24 +201,68 @@
           </div>
         </aside>
 
-        <!-- Barra de busqueda y ordenamiento de productos -->
-        <div class="productos-busqueda">
-          <input
-            class="input-busqueda"
-            type="text"
-            placeholder="Buscar productos"
-          />
-          <button class="btn-buscar">Buscar</button>
-          <button class="btn-ordenar menor-mayor">
-            Ordenar: Menor a Mayor
-          </button>
-          <button class="btn-ordenar mayor-mayor">
-            Ordenar: Mayor a Menor
-          </button>
+        <div class="productos-contenido">
+          <!-- Barra de busqueda y ordenamiento de productos -->
+          <div class="productos-busqueda">
+            <input
+              class="input-busqueda"
+              type="text"
+              placeholder="Buscar productos"
+            />
+            <button class="btn-buscar">Buscar</button>
+            <button class="btn-ordenar menor-mayor">
+              Ordenar: Menor a Mayor
+            </button>
+            <button class="btn-ordenar mayor-mayor">
+              Ordenar: Mayor a Menor
+            </button>
+            <button class="btn-ordenar mayor-precio">
+              Ordenar: Mayor Precio
+            </button>
+          </div>
+          <!-- Productos -->
+          <section class="productos-box">
+            <div class="producto-card">
+              <img
+              src="./images/skin1004-ampoule-serum-100ml-poremizing-fresh-ampoule-38409159966966.jpg"
+              alt="" / class="producto-imagen" />
+              <div class="producto-info">
+                <h5 class="producto-titulo">Centella</h5>
+                <p class="producto-descripcion">Serum hidratante y reparador</p>
+                <div class="producto-precio">
+                  <p>$53.000</p>
+                  <button class="btn-agregar-carrito">Agregar</button>
+                </div>
+              </div>
+            </div>
+            <div class="producto-card">
+              <img
+              src="./images/skin1004-ampoule-serum-100ml-poremizing-fresh-ampoule-38409159966966.jpg"
+              alt="" / class="producto-imagen" />
+              <div class="producto-info">
+                <h5 class="producto-titulo">Centella</h5>
+                <p class="producto-descripcion">Serum hidratante y reparador</p>
+                <div class="producto-precio">
+                  <p>$53.000</p>
+                  <button class="btn-agregar-carrito">Agregar</button>
+                </div>
+              </div>
+            </div>
+            <div class="producto-card">
+              <img
+              src="./images/skin1004-ampoule-serum-100ml-poremizing-fresh-ampoule-38409159966966.jpg"
+              alt="" / class="producto-imagen" />
+              <div class="producto-info">
+                <h5 class="producto-titulo">Centella</h5>
+                <p class="producto-descripcion">Serum hidratante y reparador</p>
+                <div class="producto-precio">
+                  <p>$53.000</p>
+                  <button class="btn-agregar-carrito">Agregar</button>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-
-        <!-- Productos -->
-        <section class="productos-box"></section>
       </div>
 
       <!-- Tabla de  -->
@@ -333,7 +377,7 @@
 
         <!-- Calcular envío -->
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Ingresa tu CP"/>
+          <input type="text" class="form-control" placeholder="Ingresa tu CP" />
           <button class="btn btn-calcularEnvio" type="button">
             Calcular envío
           </button>
@@ -501,11 +545,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn-primario"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn-primario" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
