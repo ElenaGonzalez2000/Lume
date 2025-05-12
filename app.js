@@ -70,9 +70,10 @@ function iniciarTest() {
     // mostrar resultado final al usuario:
     alert("Resultado del test: Tu tipo de piel es " + tipoFinal);
 }
-iniciarTest()
+// iniciarTest()
 
-// funcion para agregar productos al carrito y calcular el valor total para devolverlo al usuario
+
+// funcion para agregar productos al carrito y calcular el valor total para devolverlo al usuario: esta seccion le da a elegir al usuario entre varios productos y las cantidades que quiere comprar para calcular el total 
 
 const productos = [
     { id: 1 , nombre: "Serum hidratante" , precio: 5900},
@@ -81,3 +82,51 @@ const productos = [
     { id: 4 , nombre: "Marcarilla de Arcilla" , precio: 7300},
     { id: 5 , nombre: "Contorno de ojos" , precio: 6900}
 ]
+
+function mostrarProductos() {
+    let mensaje = "Productos disponibles: \n";
+    productos.forEach(prod =>{
+        mensaje += `${prod.id}. ${prod.nombre} - $${prod.precio}\n`;
+    });
+    return mensaje;
+}
+
+function calcularTotal(carrito) {
+    let total = 0;
+    for (let i = 0; i < carrito.length; i++) {
+        total += carrito[i].precio * carrito[i].cantidad;
+    }
+    return total;
+}
+
+function iniciarCompra() {
+    let carrito = [];
+    let seguirComprando = true;
+
+    alert("Bienvenido a la tienda Lume");
+
+    while(seguirComprando){
+        let eleccion = parseInt(prompt(mostrarProductos() + "\nElegi el numero del producto que queres comprar:"));
+        let productoElegido = productos.find(p => p.id === eleccion);
+
+        if(productoElegido){
+            let cantidad = parseInt(prompt(`Cuantas unidades de ${productoElegido.nombre} queres comprar?`));
+            if (!isNaN(cantidad) && cantidad > 0) {
+                carrito.push({...productoElegido, cantidad: cantidad});
+            } else {
+                alert("Cantidad invalida.")
+            }
+        } else {
+            alert ("Producto no valido")
+        }
+
+        let respuesta = prompt("Queres seguir agregando productos? (si/no)").toLowerCase();
+        if (respuesta !== "si") {
+            seguirComprando = false
+        }
+    }
+    let total = calcularTotal(carrito);
+    alert("Gracias por tu compra. El total es: $" + total);
+}
+
+iniciarCompra();
