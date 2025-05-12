@@ -13,6 +13,7 @@ Lumé es una tienda interactiva que permite a los usuarios explorar y comprar ar
 - HTML5
 - CSS3
 - JavaScript
+- Bootstrap
 
 ## Funciones Previstas
 
@@ -24,3 +25,9 @@ Lumé es una tienda interactiva que permite a los usuarios explorar y comprar ar
 ### Diseño del Proyecto
 
 [Enlace a prototipo en Figma](https://www.figma.com/proto/1DMyZEDTDHlGbTCQqbJ9tt/Untitled?node-id=1-2&t=brRzXRsrkXOl9VWp-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2)
+
+### Diagrama de flujo
+
+El siguiente diagrama representa el algoritmo principal de la logica de compra.
+
+[Ver Diagrama de Flujo](https://drive.google.com/file/d/18EVYc1isjKDNEOUAS6Cz8ckFBEgCS3dh/view?usp=sharing)
