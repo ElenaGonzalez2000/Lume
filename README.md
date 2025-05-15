@@ -13,6 +13,7 @@ Lumé es una tienda interactiva que permite a los usuarios explorar y comprar ar
 - HTML5
 - CSS3
 - JavaScript
+- Bootstrap
 
 ## Funciones Previstas
 
