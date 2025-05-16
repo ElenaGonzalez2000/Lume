@@ -1,1 +1,1 @@
-import { preguntas } from './preguntas.js';
+import { preguntas } from "./preguntas.js";
