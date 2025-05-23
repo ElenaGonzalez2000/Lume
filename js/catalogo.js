@@ -1,5 +1,6 @@
 export class Producto {
-    constructor(nombre, precio, cantidad, categoria, uso, marca, tipo) {
+    constructor(id, nombre, precio, cantidad, categoria, uso, marca, tipo) {
+        this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.cantidad = cantidad;
@@ -14,6 +15,7 @@ export class Producto {
 
 export const catalogo = [
     new Producto(
+        1,
         "Calming Foam Cleanser",
         5200,
         8,
@@ -23,6 +25,7 @@ export const catalogo = [
         "limpiador"
     ),
     new Producto(
+        2,
         "Low pH Good Morning Gel Cleanser",
         4800,
         10,
@@ -32,6 +35,7 @@ export const catalogo = [
         "limpiador"
     ),
     new Producto(
+        3,
         "Rice Toner",
         6200,
         5,
@@ -41,6 +45,7 @@ export const catalogo = [
         "tónico"
     ),
     new Producto(
+        4,
         "Snail Mucin Essence",
         6900,
         6,
@@ -50,6 +55,7 @@ export const catalogo = [
         "esencia"
     ),
     new Producto(
+        5,
         "Birch Juice Moisturizing Cream",
         7200,
         4,
@@ -59,6 +65,7 @@ export const catalogo = [
         "crema"
     ),
     new Producto(
+        6,
         "Sun Project Water Sun Cream SPF50",
         8000,
         7,
@@ -68,6 +75,7 @@ export const catalogo = [
         "protector solar"
     ),
     new Producto(
+        7,
         "Heartleaf 77% Soothing Toner",
         5900,
         9,
@@ -77,6 +85,7 @@ export const catalogo = [
         "tónico"
     ),
     new Producto(
+        8,
         "Rice Relief Cream",
         6500,
         6,
@@ -86,6 +95,7 @@ export const catalogo = [
         "crema"
     ),
     new Producto(
+        9,
         "Propolis Light Ampoule",
         7400,
         3,
@@ -95,6 +105,7 @@ export const catalogo = [
         "ampolla"
     ),
     new Producto(
+        10,
         "Deep Clean Foam Cleanser",
         3500,
         10,
@@ -104,6 +115,7 @@ export const catalogo = [
         "limpiador"
     ),
     new Producto(
+        11,
         "Cica Sleeping Mask",
         6000,
         5,
@@ -113,6 +125,7 @@ export const catalogo = [
         "mascarilla"
     ),
     new Producto(
+        12,
         "Real Barrier Aqua Soothing Ampoule",
         7000,
         4,
