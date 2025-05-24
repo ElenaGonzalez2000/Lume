@@ -54,5 +54,3 @@ export function ejecutarTestPorPrompt() {
 
     alert(`✨ Tu tipo de piel es: ${tipoDePielFinal ? tipoDePielFinal.toUpperCase() : "NO DEFINIDO"}`);
 }
-
-ejecutarTestPorPrompt();

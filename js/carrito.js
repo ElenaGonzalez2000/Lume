@@ -11,7 +11,7 @@ function buscarEnCarrito(id) {
 function mostrarCatalogo() {
     let mensaje = "Catalogo de productos \n";
     catalogo.forEach((p) => {
-        mensaje += `ID: ${p.id} | ${p.nombre} | $${p.precio} | Stock: ${p.cantidad} | Marca: ${p.marca} | Tipo: ${p.tipo} | Piel: ${p.categoria} | Uso: ${p.uso}\n`;
+        mensaje += `ID: ${p.id} | ${p.nombre} | $${p.precio} | Stock: ${p.cantidad}\n`;
     });
     alert(mensaje);
 }
@@ -19,7 +19,7 @@ function mostrarCatalogo() {
 // Agregar producto al carrito 
 function agregarAlCarrito() {
     mostrarCatalogo();
-    let idIngresado = prompt("Ingrese el **ID** del producto que desea agregar (o '0' para cancelar):")
+    let idIngresado = prompt("Ingrese el ID del producto que desea agregar (o '0' para cancelar):")
     if (idIngresado === null || idIngresado === "0") return;
     const id = Number(idIngresado);
     const producto = catalogo.find(p => p.id === id);
@@ -61,7 +61,7 @@ function mostrarCarrito() {
     let mensaje = "Carrito:\n"
     let total = 0;
     carrito.forEach((item, i) => {
-        mensaje += `${i + 1}. ${item.producto.nombre} (${item.producto.marca}) x ${item.cantidad} = $${item.cantidad * item.precio}\n`;
+        mensaje += `${i + 1}. ${item.producto.nombre} (${item.producto.marca}) x ${item.cantidad} = $${item.cantidad * item.producto.precio}\n`;
         total += item.cantidad * item.producto.precio;
     });
     mensaje += `\nTotal: ${total}`;
@@ -69,11 +69,11 @@ function mostrarCarrito() {
 }
 
 // menu principal
-function menuCarrito() {
+export function menuCarrito() {
     let opcion;
     do {
         opcion = prompt(
-            "Tiena (simulacion)\n" +
+            "Tienda (simulación)\n" +
             "1. Ver catalogo\n" +
             "2. Agregar producto al carrito\n" +
             "3. Ver Carrito\n" +
@@ -100,5 +100,3 @@ function menuCarrito() {
         }
     } while (opcion != "4");
 }
-
-menuCarrito();
