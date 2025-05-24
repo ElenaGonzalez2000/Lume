@@ -1,5 +1,11 @@
-import { ejecutarTestPorPrompt } from "./testPiel.js";
-import { menuCarrito } from "./carrito.js";
+import { Test } from "./testPiel.js";
+import { preguntas } from "./preguntas.js";
+import { Carrito } from "./carrito.js"
+import { catalogo } from "./catalogo.js"
+
+const test = new Test(preguntas);
+const carrito = new Carrito(catalogo);
+
 
 function menuPrincipal() {
     let salir = false;
@@ -13,10 +19,10 @@ function menuPrincipal() {
         );
         switch (opcion) {
             case "1":
-                ejecutarTestPorPrompt();
+                test.ejecutar(); 
                 break;
             case "2":
-                menuCarrito();
+                carrito.menu();
                 break;
             case "3":
                 alert("Gracias por su visita!");
