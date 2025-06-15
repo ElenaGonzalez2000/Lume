@@ -10,40 +10,13 @@ export class Test {
         };
     }
 
-    ejecutar() {
-        for (let i = 0; i < this.preguntas.length; i++) {
-            let pregunta = this.preguntas[i];
-            let mensaje = `${pregunta.texto}\n`;
-            for (let j = 0; j < pregunta.opciones.length; j++) {
-                mensaje += `${j + 1}. ${pregunta.opciones[j].texto}\n`;
-            }
+    procesarRespuesta(indicePregunta, indiceOpcion) {
+        const pregunta = this.preguntas[indicePregunta];
+        const tipo = pregunta.opciones[indiceOpcion].valor;
+        this.contadorTipoPiel[tipo]++;
+    }
 
-            let respuesta = prompt(mensaje);
-
-            // Repite hasta que la respuesta sea válida o el usuario cancele
-            while (respuesta !== null) {
-                // Limpia la respuesta de espacios y controla que no sea vacío
-                respuesta = respuesta.trim();
-                const indice = Number(respuesta) - 1;
-                if (
-                    respuesta !== "" &&
-                    !isNaN(indice) &&
-                    indice >= 0 &&
-                    indice < pregunta.opciones.length
-                ) {
-                    const tipo = pregunta.opciones[indice].valor;
-                    this.contadorTipoPiel[tipo]++;
-                    break; // Sale del while y pasa a la siguiente pregunta
-                } else {
-                    respuesta = prompt(
-                        "Opción no válida. Por favor, ingresa el número de una opción:\n" + mensaje
-                    );
-                }
-            }
-            // Si el usuario cancela el prompt sigue con la siguiente pregunta
-        }
-
-        // Calcula el tipo de piel con mayor puntaje
+    obtenerResultadoFinal() {
         let tipoDePielFinal = null;
         let maximo = 0;
         for (const tipo in this.contadorTipoPiel) {
@@ -52,7 +25,10 @@ export class Test {
                 tipoDePielFinal = tipo;
             }
         }
+        return tipoDePielFinal;
+    }
 
-        alert(`✨ Tu tipo de piel es: ${tipoDePielFinal ? tipoDePielFinal.toUpperCase() : "NO DEFINIDO"}`);
+    obtenerPreguntas() {
+        return this.preguntas;
     }
 }
