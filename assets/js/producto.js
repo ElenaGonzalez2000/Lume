@@ -1,12 +1,18 @@
 export class Producto {
-    constructor(id, nombre, precio, cantidad, categoria, uso, marca, tipo) {
+    constructor({id, nombre, precio, stock, piel, uso, marca, categoria, descripcion, imagen}) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
-        this.cantidad = cantidad;
-        this.categoria = categoria; // piel: seca, mixta, grasa, normal, sensible
+        this.stock = stock;
+        this.piel = piel; // tipo de piel
         this.uso = uso; // mañana, noche, todo el día
         this.marca = marca;
-        this.tipo = tipo; // crema, limpiador, etc
+        this.categoria = categoria; // piel: seca, mixta, grasa, normal, sensible
+        this.descripcion = descripcion;
+        this.imagen = imagen;
+    }
+
+    getResumen(){
+        return `${this.nombre} - $${this.precio}`
     }
 }

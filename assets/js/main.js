@@ -1,128 +1,109 @@
-import { Test } from "./testPiel.js";
-import { preguntas } from "./preguntas.js";
-import { Carrito } from "./carrito.js"
-import { Catalogo } from "./catalogo.js"
+import { Catalogo } from "./catalogo.js";
 
-const test = new Test(preguntas);
 const catalogo = new Catalogo();
-const carrito = new Carrito(catalogo);
+await catalogo.cargarCatalogo();
 
+// Traigo el contenedor del html
+const contenedorProductos = document.querySelector(".productos-box");
+const filtros = document.querySelectorAll(".productos-filtros button");
+const btnBuscar = document.querySelector(".btn-buscar");
+const inputBuscar = document.querySelector(".input-busqueda");
+const ordenarAsc = document.querySelector(".menor-mayor");
+const ordenarDesc = document.querySelector(".mayor-menor");
+const btnLimpiar = document.querySelector(".btn-limpiar-filtros");
 
-function menuPrincipal() {
-    let salir = false;
-    while (!salir) {
-        const opcion = prompt(
-            "Bienvenida/o\n" +
-            "¿Qué quieres hacer?\n\n" +
-            "1. Realizar test de tipo de piel\n" +
-            "2. Usar la tienda de productos (carrito)\n" +
-            "3. Salir"
-        );
-        switch (opcion) {
-            case "1":
-                const preguntas = test.obtenerPreguntas();
-                for (let i = 0; i < preguntas.length; i++) {
-                    const pregunta = preguntas[i];
-                    let mensaje = `${pregunta.texto}\n`;
-                    pregunta.opciones.forEach((op, j) => {
-                        mensaje += `${j + 1}. ${op.texto}\n`;
-                    });
+// funcion para renderizar la card
+function crearCard(producto) {
+    const card = document.createElement("div");
+    card.classList.add("producto-card");
 
-                    let respuesta = prompt(mensaje);
-
-                    while (respuesta !== null) {
-                        respuesta = respuesta.trim();
-                        const indice = Number(respuesta) - 1;
-                        if (
-                            respuesta !== "" &&
-                            !isNaN(indice) &&
-                            indice >= 0 &&
-                            indice < pregunta.opciones.length
-                        ) {
-                            test.procesarRespuesta(i, indice);
-                            break;
-                        } else {
-                            respuesta = prompt("Opción no válida. Por favor, ingresa un número:\n" + mensaje);
-                        }
-                    }
-                }
-                const resultado = test.obtenerResultadoFinal();
-                alert(`✨ Tu tipo de piel es: ${resultado ? resultado.toUpperCase() : "NO DEFINIDO"}`);
-                break;
-
-            case "2":
-                let opcionTienda;
-                do {
-                    opcionTienda = prompt(
-                        "Tienda (simulación)\n" +
-                        "1. Ver catálogo\n" +
-                        "2. Agregar producto al carrito\n" +
-                        "3. Ver carrito\n" +
-                        "4. Volver al menú principal"
-                    );
-                    switch (opcionTienda) {
-                        case "1":
-                            let mensaje = "Catálogo de productos:\n";
-                            catalogo.mostrarCatalogo().forEach(p => {
-                                mensaje += `ID: ${p.id} | ${p.nombre} | $${p.precio} | Stock: ${p.cantidad}\n`;
-                            });
-                            alert(mensaje);
-                            break;
-                        case "2":
-                            const idIngresado = prompt("Ingrese el ID del producto que desea agregar (o '0' para cancelar):");
-                            if (idIngresado === null || idIngresado === "0") break;
-
-                            const id = Number(idIngresado);
-                            const producto = catalogo.buscarPorId(id);
-                            if (!producto) {
-                                alert("ID inválido.");
-                                break;
-                            }
-
-                            const cantidadIngresada = prompt(`¿Cuántas unidades de "${producto.nombre}" desea agregar? (Máximo: ${producto.cantidad})`);
-                            if (cantidadIngresada === null) break;
-
-                            const cantidad = Number(cantidadIngresada);
-                            const resultado = carrito.agregarProducto(id, cantidad);
-                            alert(resultado.mensaje);
-                            break;
-
-                        case "3":
-                            const productos = carrito.obtenerCarrito();
-                            if (productos.length === 0) {
-                                alert("El carrito está vacío.");
-                                break;
-                            }
-
-                            let carritoMsg = "Carrito:\n";
-                            productos.forEach((item, i) => {
-                                carritoMsg += `${i + 1}. ${item.nombre} (${item.marca}) x ${item.cantidad} = $${item.subtotal}\n`;
-                            });
-                            carritoMsg += `\nTotal: $${carrito.calcularTotal()}`;
-                            alert(carritoMsg);
-                            break;
-
-                        case "4":
-                            break;
-
-                        default:
-                            alert("Opción no válida.");
-                    }
-                } while (opcionTienda !== "4");
-                break;
-
-            case "3":
-                alert("Gracias por su visita!");
-                salir = true;
-                break;
-            default:
-                if (opcion !== null) {
-                    alert("Opción no válida.");
-                } else {
-                    salir = true;
-                }
-        }
-    }
+    card.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}" class="producto-imagen" />
+        <div class="producto-info">
+            <h5 class="producto-titulo">${producto.nombre}</h5>
+            <p class="producto-descripcion">${producto.descripcion}</p>
+            <div class="producto-precio">
+                <p>$${producto.precio}</p>
+                <button class="btn-agregar-carrito" data-id="${producto.id}">Agregar</button>
+            </div>
+        </div>
+    `;
+    return card;
 }
 
-menuPrincipal();
+// funcion para renderizar todos los productos 
+function renderizarCatalogo(lista) {
+    contenedorProductos.innerHTML = "";
+
+    if (lista.length === 0) {
+        const mensaje = document.createElement("p");
+        mensaje.classList.add("mensaje-vacio", "text-center", "mt-4");
+        mensaje.textContent = "No se encontraron resultados. Probá con otro filtro o busqueda.";
+        contenedorProductos.appendChild(mensaje);
+        return;
+    }
+
+    lista.forEach((producto) => {
+        const card = crearCard(producto);
+        contenedorProductos.appendChild(card);
+    });
+}
+
+renderizarCatalogo(catalogo.mostrarCatalogo());
+
+// filtros por tipo de piel, aategoria y precio
+filtros.forEach(boton => {
+    boton.addEventListener("click", () => {
+        const texto = boton.textContent.toLowerCase();
+        let resultados = catalogo.mostrarCatalogo();
+
+        if (texto.includes("piel")) {
+            resultados = catalogo.filtrarPorTipoPiel(texto.replace("piel ", ""));
+        } else if (["limpiadores", "hidratantes", "protectores solares", "exfoliantes", "serums", "mascarillas", "tonicos"].some(cat => texto.includes(cat))) {
+            const mapeo = {
+                "limpiadores": "limpiador",
+                "hidratantes": "crema",
+                "protectores solares": "protectorsolar",
+                "exfoliantes": "exfoliante",
+                "serums": "serum",
+                "mascarillas": "mascarilla",
+                "tonicos": "tonico"
+            };
+            const categoria = mapeo[texto];
+            resultados = catalogo.filtrarPorCategoria(categoria);
+        } else if (texto.includes("menor")) {
+            resultados = catalogo.filtrarPorRangoPrecio(0, 9999);
+        } else if (texto.includes("mayor")) {
+            resultados = catalogo.filtrarPorRangoPrecio(20001, Infinity);
+        } else if (texto.includes("$10.000")) {
+            resultados = catalogo.filtrarPorRangoPrecio(10000, 20000)
+        }
+        renderizarCatalogo(resultados);
+    });
+});
+
+// busqueda por input
+btnBuscar.addEventListener("click", () => {
+    const texto = inputBuscar.value.trim();
+    if (texto !== "") {
+        const resultados = catalogo.buscarPorInput(texto);
+        renderizarCatalogo(resultados)
+    }
+})
+
+// ordenar
+ordenarAsc.addEventListener("click", () => {
+    const resultados = catalogo.ordenarPorPrecio(true);
+    renderizarCatalogo(resultados);
+});
+
+ordenarDesc.addEventListener("click", () => {
+    const resultados = catalogo.ordenarPorPrecio(false);
+    renderizarCatalogo(resultados);
+});
+
+// limpiar filtros o busqueda
+btnLimpiar.addEventListener("click", () => {
+    inputBuscar.value = "";
+    renderizarCatalogo(catalogo.mostrarCatalogo());
+});

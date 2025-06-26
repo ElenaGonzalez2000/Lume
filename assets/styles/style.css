@@ -230,7 +230,7 @@ body {
 .producto-precio{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -239,17 +239,18 @@ body {
 .producto-precio p{
   margin: 0;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .producto-precio button{
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 1.5rem;
   max-width: 100%;
   flex-shrink: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   color: var(--color-fondo);
   background-color: var(--color-boton);
   transition: 0.3s ease-in-out;
