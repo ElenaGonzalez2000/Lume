@@ -1,5 +1,8 @@
 import { Catalogo } from "./catalogo.js";
 import { Carrito } from "./carrito.js";
+import { Test } from "./testPiel.js";
+import { preguntas } from "./preguntas.js";
+
 
 const catalogo = new Catalogo();
 await catalogo.cargarCatalogo();
@@ -16,6 +19,7 @@ const btnLimpiar = document.querySelector(".btn-limpiar-filtros");
 
 // funcion para renderizar la card de los productos
 function crearCard(producto) {
+  // crea la estructura html de una card de producto
   const card = document.createElement("div");
   card.classList.add("producto-card");
 
@@ -38,6 +42,7 @@ function renderizarCatalogo(lista) {
   contenedorProductos.innerHTML = "";
 
   if (lista.length === 0) {
+    // si no hay productos muestra un mensaje
     const mensaje = document.createElement("p");
     mensaje.classList.add("mensaje-vacio", "text-center", "mt-4");
     mensaje.textContent =
@@ -45,13 +50,14 @@ function renderizarCatalogo(lista) {
     contenedorProductos.appendChild(mensaje);
     return;
   }
-
+  // agrega cada producto al contenedor
   lista.forEach((producto) => {
     const card = crearCard(producto);
     contenedorProductos.appendChild(card);
   });
 }
 
+// inicializamos
 renderizarCatalogo(catalogo.mostrarCatalogo());
 
 // filtros por tipo de piel, aategoria y precio
@@ -128,7 +134,7 @@ function mostrarToast(texto, color = "#2d6ed0") {
     duration: 2000,
     gravity: "bottom",
     position: "right",
-    backgroundColor: color,
+    background: color,
   }).showToast();
 }
 
@@ -144,11 +150,12 @@ const spanEnvio = document.querySelector("#carrito-envio");
 const spanTotal = document.querySelector("#carrito-total");
 
 function renderizarCarrito() {
-    const resumen = carrito.obtenerResumen();
-    const itemsContainer = contenedorCarrito.querySelector(".carrito-items");
-    itemsContainer.innerHTML = "";
+  // muestra los productos agregados al carrito y los totales
+  const resumen = carrito.obtenerResumen();
+  const itemsContainer = contenedorCarrito.querySelector(".carrito-items");
+  itemsContainer.innerHTML = "";
 
-    resumen.forEach((item) => {
+  resumen.forEach((item) => {
     const div = document.createElement("div");
     div.className = "d-flex align-items-stretch justify-content-between p-3 border rounded mb-3 carrito-item";
     div.innerHTML = `
@@ -176,60 +183,147 @@ function renderizarCarrito() {
             </div>
         </div>
         `;
-        itemsContainer.appendChild(div);
-    });
+    itemsContainer.appendChild(div);
+  });
 
-    spanSubtotal.textContent = `$${carrito.calcularSubtotal()}`;
-    spanEnvio.textContent = `$${carrito.envio}`;
-    spanTotal.textContent = `$${carrito.calcularTotal()}`;
+  spanSubtotal.textContent = `$${carrito.calcularSubtotal()}`;
+  spanEnvio.textContent = `$${carrito.envio}`;
+  spanTotal.textContent = `$${carrito.calcularTotal()}`;
 }
 
 contenedorProductos.addEventListener("click", (e) => {
-    if (e.target.classList.contains("btn-agregar-carrito")) {
-        const id = Number(e.target.dataset.id);
+  if (e.target.classList.contains("btn-agregar-carrito")) {
+    const id = Number(e.target.dataset.id);
         carrito.agregarProducto(id, 1);
-        renderizarCarrito();
-        mostrarToast("Producto agregado al carrito");
-    }
+            renderizarCarrito();
+            mostrarToast("Producto agregado al carrito");
+  }
 });
 
 contenedorCarrito.addEventListener("click", (e) => {
-    const id = Number(e.target.dataset.id);
+  const id = Number(e.target.dataset.id);
 
     if(e.target.classList.contains("btn-eliminar")) {
-        carrito.eliminarProdcuto(id);
-        renderizarCarrito();
-        mostrarToast("Producto eliminado");
-    } else if (e.target.classList.contains("btn-aumentar")) {
-        const item = carrito.buscarEnCarrito(id);
-        if (item) carrito.cambiarCantidad(id, item.cantidad + 1);
-        renderizarCarrito();
-    } else if (e.target.classList.contains("btn-disminuir")) {
-        const item = carrito.buscarEnCarrito(id);
-        if (item && item.cantidad > 1) carrito.cambiarCantidad(id, item.cantidad - 1);
-        renderizarCarrito();
-    }
+    carrito.eliminarProdcuto(id);
+    renderizarCarrito();
+    mostrarToast("Producto eliminado");
+  } else if (e.target.classList.contains("btn-aumentar")) {
+    const item = carrito.buscarEnCarrito(id);
+    if (item) carrito.cambiarCantidad(id, item.cantidad + 1);
+    renderizarCarrito();
+  } else if (e.target.classList.contains("btn-disminuir")) {
+    const item = carrito.buscarEnCarrito(id);
+    if (item && item.cantidad > 1) carrito.cambiarCantidad(id, item.cantidad - 1);
+    renderizarCarrito();
+  }
 });
 
 btnVaciarCarrito.addEventListener("click", () => {
-    carrito.vaciar();
-    carrito.envio = 0;
-    inputCP.value = "";
-    renderizarCarrito();
-    mostrarToast("Vaciaste el carrito");
+  carrito.vaciar();
+  carrito.envio = 0;
+  inputCP.value = "";
+  renderizarCarrito();
+  mostrarToast("Vaciaste el carrito");
 });
 
 btnCalcularEnvio.addEventListener("click", () => {
-    const cp = inputCP.value.trim();
-    const resultado = carrito.calcularEnvio(cp);
+  const cp = inputCP.value.trim();
+  const resultado = carrito.calcularEnvio(cp);
 
     if (!/^[1-9]\d{3}$/.test(cp)){
-        mostrarToast("Codigo postal invalido", "#cd3545");
-        return;
-    }
-    carrito.calcularEnvio(cp);
-    renderizarCarrito();
-    mostrarToast("Envío calculado");
+    mostrarToast("Codigo postal invalido", "#cd3545");
+    return;
+  }
+  carrito.calcularEnvio(cp);
+  renderizarCarrito();
+  mostrarToast("Envío calculado");
 });
 
+// inicializamos
 renderizarCarrito();
+
+
+// Test
+
+const formTest = document.querySelector("#formTest");
+const contenedorPreguntas = document.querySelector("#contenedorPreguntas");
+const resultadoTest = document.querySelector("#resultadoTest");
+const btnVerResultado = document.querySelector("#btnVerResultado");
+
+const test = new Test(preguntas);
+
+// renderizamos las preguntas usando radius
+function renderizarPreguntas() {
+  contenedorPreguntas.innerHTML = "";
+
+  test.obtenerPreguntas().forEach((pregunta, index) => {
+    const div = document.createElement("div");
+    div.classList.add("mb-3");
+
+    const titulo = document.createElement("h6");
+    titulo.classList.add("mt-4");
+    titulo.textContent = `${index + 1}. ${pregunta.texto}`;
+    div.appendChild(titulo);
+
+    pregunta.opciones.forEach((opcion, idx) => {
+      const optionId = `preg-${index}-opt-${idx}`;
+
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = `pregunta-${index}`;
+      radio.value = idx;
+      radio.id = optionId;
+      radio.classList.add("form-check-input");
+
+      const label = document.createElement("label");
+      label.htmlFor = optionId;
+      label.textContent = opcion.texto;
+      label.classList.add("form-check-label", "ms-2");
+
+      const wrapper = document.createElement("div");
+      wrapper.classList.add("form-check", "ms-3");
+      wrapper.appendChild(radio);
+      wrapper.appendChild(label);
+
+      div.appendChild(wrapper);
+    });
+
+    contenedorPreguntas.appendChild(div);
+  });
+}
+
+btnVerResultado.addEventListener("click", () => {
+  const respuestasValidas = [];
+
+  preguntas.forEach((preg, i) => {
+    const seleccionada = formTest.querySelector(`input[name="pregunta-${i}"]:checked`);
+    if (seleccionada) {
+      respuestasValidas.push({ pregunta: i, opcion: parseInt(seleccionada.value) });
+    }
+  });
+
+  if (respuestasValidas.length !== preguntas.length) {
+    mostrarToast("Por favor, completá todas las preguntas", "#cd3545");
+    return;
+  }
+
+  // reinicia el test y procesamos las respuestas
+  const nuevoTest = new Test(preguntas);
+  respuestasValidas.forEach(({ pregunta, opcion }) => {
+    nuevoTest.procesarRespuesta(pregunta, opcion);
+  });
+
+  const resultado = nuevoTest.obtenerResultadoFinal();
+  mostrarResultado(resultado);
+});
+
+function mostrarResultado(tipo) {
+  // muestra es resultado final del test 
+  resultadoTest.style.display = "block";
+  resultadoTest.innerHTML = `
+    <p class="fw-bold text-center">Tu tipo de piel es: <span class="text-uppercase">${tipo}</span></p>
+  `;
+}
+
+// inicializamos
+renderizarPreguntas();

@@ -367,130 +367,14 @@
           </div>
           <div class="modal-body">
             <form id="formTest">
-              <p>Seleccioná las afirmaciones que mejor describen tu piel:</p>
-
-              <h6 class="mt-3">🧴 Textura y sensación</h6>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="seca"
-                  id="check1"
-                />
-                <label class="form-check-label" for="check1"
-                  >Mi piel se siente tirante después de lavarla</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="grasa"
-                  id="check2"
-                />
-                <label class="form-check-label" for="check2"
-                  >Mi piel suele sentirse aceitosa al tacto</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="mixta"
-                  id="check3"
-                />
-                <label class="form-check-label" for="check3"
-                  >Tengo zonas grasas (nariz, frente) y otras secas
-                  (mejillas)</label
-                >
-              </div>
-
-              <h6 class="mt-4">🌞 Apariencia durante el día</h6>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="grasa"
-                  id="check4"
-                />
-                <label class="form-check-label" for="check4"
-                  >Mi piel brilla pocas horas después de haberla lavado</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="seca"
-                  id="check5"
-                />
-                <label class="form-check-label" for="check5"
-                  >Mi piel tiende a verse opaca o apagada</label
-                >
-              </div>
-
-              <h6 class="mt-4">💧 Hidratación</h6>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="seca"
-                  id="check6"
-                />
-                <label class="form-check-label" for="check6"
-                  >Siento que necesito aplicar crema varias veces al día</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="normal"
-                  id="check7"
-                />
-                <label class="form-check-label" for="check7"
-                  >Mi piel se siente cómoda sin resequedad ni grasitud</label
-                >
-              </div>
-
-              <h6 class="mt-4">🔥 Sensibilidad</h6>
-
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="sensible"
-                  id="check8"
-                />
-                <label class="form-check-label" for="check8"
-                  >Mi piel se enrojece fácilmente o reacciona a productos</label
-                >
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="sensible"
-                  id="check9"
-                />
-                <label class="form-check-label" for="check9"
-                  >Siento ardor o picazón al usar ciertos cosméticos</label
-                >
-              </div>
-
-              <button
-                type="button"
-                class="btn-primario mt-4"
-                onclick="calcularTipoDePiel()"
-              >
+              <p>Seleccioná la opción que mejor describa tu piel en cada caso:</p>
+              <div id="contenedorPreguntas"></div>
+              <button type="button" id="btnVerResultado" class="btn-primario mt-4">
                 Ver resultado
               </button>
-
               <div class="mt-3" id="resultadoTest" style="display: none"></div>
             </form>
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn-primario" data-bs-dismiss="modal">
