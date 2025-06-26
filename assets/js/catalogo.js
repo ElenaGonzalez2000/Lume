@@ -5,7 +5,7 @@ export class Catalogo {
         this.productos = [];
     }
 
-    async cargarCatalogo(ruta = '../../api/catalogo.json') {
+    async cargarCatalogo(ruta = '../api/catalogo.json') {
         try {
             const respuesta = await fetch(ruta)
             if(!respuesta.ok) throw new Error('Error al cargar el JSON');
