@@ -1,7 +1,7 @@
 export class Carrito {
     constructor(catalogo) {
         this.catalogo = catalogo;
-        this.productos = this.cargarDesdeStorage;
+        this.productos = this.cargarDesdeStorage();
         this.envio = 0;
     }
 
@@ -42,7 +42,7 @@ export class Carrito {
     // eliminar producto por id 
     eliminarProdcuto(id) {
         const index = this.productos.findIndex(item => item.producto.id === id);
-        if(index !== 1){
+        if(index !== -1){
             this.productos.splice(index, 1);
             this.guardarEnStorage();
         }
@@ -88,12 +88,13 @@ export class Carrito {
             return null
         }
 
-        if(cp.startWith("1")) {
+        const primerDigito = cp.trim()[0];
+        if (primerDigito === "1") {
             this.envio = 2000;
-        } else if (cp.startWith("2")) {
-            this.envio === 3500;
+        } else if (primerDigito === "2") {
+            this.envio = 3500;
         } else {
-            this.envio === 5000;
+            this.envio = 5000;
         }
         return this.envio;
     }
