@@ -134,7 +134,7 @@ function mostrarToast(texto, color = "#2d6ed0") {
     duration: 2000,
     gravity: "bottom",
     position: "right",
-    background: color,
+    backgroundColor: color,
   }).showToast();
 }
 
