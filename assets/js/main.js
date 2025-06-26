@@ -216,7 +216,7 @@ btnVaciarCarrito.addEventListener("click", () => {
     carrito.envio = 0;
     inputCP.value = "";
     renderizarCarrito();
-    mostrarToast("Carrito vaciado");
+    mostrarToast("Vaciaste el carrito");
 });
 
 btnCalcularEnvio.addEventListener("click", () => {
