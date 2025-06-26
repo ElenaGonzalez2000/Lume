@@ -11,8 +11,4 @@ export class Producto {
         this.descripcion = descripcion;
         this.imagen = imagen;
     }
-
-    getResumen(){
-        return `${this.nombre} - $${this.precio}`
-    }
 }
