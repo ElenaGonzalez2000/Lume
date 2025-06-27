@@ -9,7 +9,7 @@
     "marca": "Skin 1004",
     "categoria": "crema",
     "descripcion": "Ilumina y suaviza",
-    "imagen": "../assets/images/productos/producto_01.png"
+    "imagen": "assets/images/productos/producto_01.png"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "marca": "Skin 1004",
     "categoria": "serum",
     "descripcion": "Aclara imperfecciones",
-    "imagen": "../assets/images/productos/producto_02.png"
+    "imagen": "assets/images/productos/producto_02.png"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "marca": "Skin 1004",
     "categoria": "tonico",
     "descripcion": "Refresca e ilumina",
-    "imagen": "../assets/images/productos/producto_03.png"
+    "imagen": "assets/images/productos/producto_03.png"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "marca": "Skin 1004",
     "categoria": "crema",
     "descripcion": "Controla oleosidad",
-    "imagen": "../assets/images/productos/producto_04.png"
+    "imagen": "assets/images/productos/producto_04.png"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "marca": "Skin 1004",
     "categoria": "limpiador",
     "descripcion": "Limpieza profunda",
-    "imagen": "../assets/images/productos/producto_05.png"
+    "imagen": "assets/images/productos/producto_05.png"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "marca": "Skin 1004",
     "categoria": "mascarilla",
     "descripcion": "Purifica y renueva",
-    "imagen": "../assets/images/productos/producto_06.png"
+    "imagen": "assets/images/productos/producto_06.png"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "marca": "Skin 1004",
     "categoria": "serum",
     "descripcion": "Minimiza poros",
-    "imagen": "../assets/images/productos/producto_07.png"
+    "imagen": "assets/images/productos/producto_07.png"
   },
   {
     "id": 8,
@@ -93,7 +93,7 @@
     "marca": "Skin 1004",
     "categoria": "tonico",
     "descripcion": "Cierra poros",
-    "imagen": "../assets/images/productos/producto_08.png"
+    "imagen": "assets/images/productos/producto_08.png"
   },
   {
     "id": 9,
@@ -105,7 +105,7 @@
     "marca": "Skin 1004",
     "categoria": "crema",
     "descripcion": "Calma e hidrata",
-    "imagen": "../assets/images/productos/producto_09.png"
+    "imagen": "assets/images/productos/producto_09.png"
   },
   {
     "id": 10,
@@ -117,7 +117,7 @@
     "marca": "Skin 1004",
     "categoria": "limpiador",
     "descripcion": "Limpia sin resecar",
-    "imagen": "../assets/images/productos/producto_10.png"
+    "imagen": "assets/images/productos/producto_10.png"
   },
   {
     "id": 11,
@@ -129,7 +129,7 @@
     "marca": "Skin 1004",
     "categoria": "mascarilla",
     "descripcion": "Revitaliza piel",
-    "imagen": "../assets/images/productos/producto_11.jpg"
+    "imagen": "assets/images/productos/producto_11.jpg"
   },
   {
     "id": 12,
@@ -141,7 +141,7 @@
     "marca": "Skin 1004",
     "categoria": "protectorSolar",
     "descripcion": "Alta protección UV",
-    "imagen": "../assets/images/productos/producto_12.jpg"
+    "imagen": "assets/images/productos/producto_12.jpg"
   },
   {
     "id": 13,
@@ -153,7 +153,7 @@
     "marca": "Skin 1004",
     "categoria": "serum",
     "descripcion": "Repara profundamente",
-    "imagen": "../assets/images/productos/producto_13.png"
+    "imagen": "assets/images/productos/producto_13.png"
   },
   {
     "id": 14,
@@ -165,7 +165,7 @@
     "marca": "Skin 1004",
     "categoria": "tonico",
     "descripcion": "Refresca y equilibra",
-    "imagen": "../assets/images/productos/producto_14.png"
+    "imagen": "assets/images/productos/producto_14.png"
   },
   {
     "id": 15,
@@ -177,7 +177,7 @@
     "marca": "Skin 1004",
     "categoria": "crema",
     "descripcion": "Hidratación intensa",
-    "imagen": "../assets/images/productos/producto_15.png"
+    "imagen": "assets/images/productos/producto_15.png"
   },
   {
     "id": 16,
@@ -189,7 +189,7 @@
     "marca": "Skin 1004",
     "categoria": "mascarilla",
     "descripcion": "Nutre profundamente",
-    "imagen": "../assets/images/productos/producto_16.jpg"
+    "imagen": "assets/images/productos/producto_16.jpg"
   },
   {
     "id": 17,
@@ -201,7 +201,7 @@
     "marca": "Skin 1004",
     "categoria": "protectorSolar",
     "descripcion": "Protege e hidrata",
-    "imagen": "../assets/images/productos/producto_17.png"
+    "imagen": "assets/images/productos/producto_17.png"
   },
   {
     "id": 18,
@@ -213,7 +213,7 @@
     "marca": "Skin 1004",
     "categoria": "serum",
     "descripcion": "Hidratación prolongada",
-    "imagen": "../assets/images/productos/producto_18.png"
+    "imagen": "assets/images/productos/producto_18.png"
   },
   {
     "id": 19,
@@ -225,7 +225,7 @@
     "marca": "Skin 1004",
     "categoria": "tonico",
     "descripcion": "Suaviza y calma",
-    "imagen": "../assets/images/productos/producto_19.png"
+    "imagen": "assets/images/productos/producto_19.png"
   },
   {
     "id": 20,
@@ -237,7 +237,7 @@
     "marca": "Skin 1004",
     "categoria": "crema",
     "descripcion": "Repara e hidrata",
-    "imagen": "../assets/images/productos/producto_20.png"
+    "imagen": "assets/images/productos/producto_20.png"
   },
   {
     "id": 21,
@@ -249,7 +249,7 @@
     "marca": "Skin 1004",
     "categoria": "limpiador",
     "descripcion": "Limpieza suave",
-    "imagen": "../assets/images/productos/producto_21.png"
+    "imagen": "assets/images/productos/producto_21.png"
   },
   {
     "id": 22,
@@ -261,7 +261,7 @@
     "marca": "Skin 1004",
     "categoria": "mascarilla",
     "descripcion": "Alivia irritación",
-    "imagen": "../assets/images/productos/producto_22.jpg"
+    "imagen": "assets/images/productos/producto_22.jpg"
   },
   {
     "id": 23,
@@ -273,6 +273,6 @@
     "marca": "Skin 1004",
     "categoria": "serum",
     "descripcion": "Reduce rojeces",
-    "imagen": "../assets/images/productos/producto_23.png"
+    "imagen": "assets/images/productos/producto_23.png"
   }
 ]
