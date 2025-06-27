@@ -36,7 +36,7 @@ Este archivo documenta todos los cambios significativos del proyecto.
 ### 📁 Organización del repositorio
 
 - Rama: `release/segundo*parcial`
-- Pull Request:
+- [Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/7)
 - [GitHub Pages](https://elenagonzalez2000.github.io/Lume/)
 
 ---
