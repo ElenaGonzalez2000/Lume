@@ -1,9 +1,3 @@
-# 📦 CHANGELOG
-
-Este archivo documenta todos los cambios significativos del proyecto.
-
----
-
 ## 26/06/2025
 
 ### ✨ Nuevas funcionalidades
