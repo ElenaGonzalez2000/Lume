@@ -1,8 +1,21 @@
 import { Catalogo } from "./catalogo.js";
 import { Carrito } from "./carrito.js";
 import { Test } from "./testPiel.js";
-import { preguntas } from "./preguntas.js";
+import { Pregunta } from "./pregunta.js";
 
+
+let preguntas = [];
+
+async function cargarPreguntas(ruta = "api/preguntas.json") {
+  try {
+    const res = await fetch(ruta);
+    if (!res.ok) throw new Error("Error al cargar las preguntas");
+    const data = await res.json();
+    preguntas = data.map(p => new Pregunta(p.id, p.texto, p.opciones));
+  } catch (error) {
+    console.error("No se pudo cargar el test", error);
+  }
+}
 
 const catalogo = new Catalogo();
 await catalogo.cargarCatalogo();
@@ -250,6 +263,7 @@ const contenedorPreguntas = document.querySelector("#contenedorPreguntas");
 const resultadoTest = document.querySelector("#resultadoTest");
 const btnVerResultado = document.querySelector("#btnVerResultado");
 
+await cargarPreguntas();
 const test = new Test(preguntas);
 
 // renderizamos las preguntas usando radius
