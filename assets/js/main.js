@@ -109,6 +109,11 @@ filtros.forEach((boton) => {
     } else if (texto.includes("$10.000")) {
       resultados = catalogo.filtrarPorRangoPrecio(10000, 20000);
     }
+
+    // funcionalidad para que los filtros seleccionados queden activos con distintos estilos 
+    filtros.forEach(b => b.classList.remove("filtro-activo"));
+    boton.classList.add("filtro-activo");
+
     renderizarCatalogo(resultados);
   });
 });
@@ -136,6 +141,7 @@ ordenarDesc.addEventListener("click", () => {
 // limpiar filtros o busqueda
 btnLimpiar.addEventListener("click", () => {
   inputBuscar.value = "";
+  filtros.forEach(b => b.classList.remove("filtro-activo")); // limpia estilos
   renderizarCatalogo(catalogo.mostrarCatalogo());
 });
 
