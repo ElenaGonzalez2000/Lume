@@ -3,7 +3,6 @@ import { Carrito } from "./carrito.js";
 import { Test } from "./testPiel.js";
 import { Pregunta } from "./pregunta.js";
 
-
 let preguntas = [];
 
 async function cargarPreguntas(ruta = "api/preguntas.json") {
@@ -264,6 +263,7 @@ const resultadoTest = document.querySelector("#resultadoTest");
 const btnVerResultado = document.querySelector("#btnVerResultado");
 
 await cargarPreguntas();
+
 const test = new Test(preguntas);
 
 // renderizamos las preguntas usando radius
