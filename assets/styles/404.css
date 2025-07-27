@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; 
+}
+
+.error-404 {
+  max-width: 500px;
+  padding: 20px;
+}
+
+.error-404 h1 {
+  font-size: 80px;
+  color: #7b3f3f;
+}
+
+.error-404 p {
+  font-size: 18px;
+  margin: 10px 0 20px;
+}
+
+.error-404 a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6a8f7a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.error-404 a:hover {
+  background-color: #7b3f3f;
+}
