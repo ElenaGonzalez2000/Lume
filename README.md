@@ -54,8 +54,13 @@ Proyecto Universitario para la materia: **Programación Web I**.
   │   ├── producto.js
   │   └── testPiel.js
   └── 📁 styles
+📁 docs
+  ├── anexos.md
+  └── frameworkVue.md
+  └── frameworkReact.md
 📁 pages
-  ├── contacto.html
+  ├── 404.html
+  └── contacto.html
   └── nosotros.html
 index.html
 README.md
