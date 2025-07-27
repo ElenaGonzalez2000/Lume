@@ -1,81 +1,81 @@
 # Changelog
 
-## 2.0.2 - 2025-07-27 (Correcciones Segundo Parcial)
+## 2.0.2 - 27/07/2025 (Correcciones Segundo Parcial)
 
 ### Sprint learnings
 
-- Reforzamos la importancia de seguir el flujo de ramas establecido y la gestión de correcciones post-entrega.
-- **Aprendimos la importancia de mantener la rama `develop` actualizada con todas las entregas previas antes de crear ramas de `release` para parciales, para asegurar un flujo de revisión adecuado.**
+* Reforzamos la importancia de seguir el flujo de ramas establecido y la gestión de correcciones post-entrega.
+* **Aprendimos la importancia de mantener la rama `develop` actualizada con todas las entregas previas antes de crear ramas de `release` para parciales, para asegurar un flujo de revisión adecuado.**
 
 ### Added
 
-- Implementación de correcciones solicitadas para el Segundo Parcial.
-- **Creación de una plantilla (template) de Pull Request en el repositorio para estandarizar las solicitudes de revisión.**
+* Implementación de correcciones solicitadas para el Segundo Parcial.
+* **Creación de una plantilla (template) de Pull Request en el repositorio para estandarizar las solicitudes de revisión.**
 
 ### Changed
 
-- N/A
+* N/A
 
 ### Fixed
 
-- Errores y observaciones identificadas en la entrega inicial del Segundo Parcial, incluyendo:
-    - **Corrección del formato y contenido del archivo `CHANGELOG.md` según las observaciones.**
-    - **Ajuste del flujo de creación de la rama `release/segundo-parcial-correcion` para que parta de una `develop` con los últimos cambios de la cuarta entrega ya mergeados, resolviendo el problema del flujo de Git roto.**
-    - **Resolución de la falta de presentación de la cuarta entrega para revisión previa.**
-    - **Revisión de la carga asíncrona de datos para asegurar que la información estática (preguntas) también pueda cargarse desde un JSON.**
+* Errores y observaciones identificadas en la entrega inicial del Segundo Parcial, incluyendo:
 
-## 1.1.1 - 2025-07-26 (Corrección de Flujo - Creación tardía de feature/cuarta-entrega)
+  * **Corrección del formato y contenido del archivo `CHANGELOG.md` según las observaciones.**
+  * **Resolución de la falta de presentación de la cuarta entrega para revisión previa.**
+  * **Revisión de la carga asíncrona de datos para asegurar que la información estática (preguntas) también pueda cargarse desde un JSON.**
+
+## 1.1.1 - 26/07/2025 (Corrección de Flujo - Creación tardía de feature/cuarta-entrega)
 
 ### Sprint learnings
 
-- Se comprendió la importancia de adherirse al flujo de trabajo de ramas desde el inicio para evitar inconsistencias.
+* Se comprendió la importancia de adherirse al flujo de trabajo de ramas desde el inicio para evitar inconsistencias.
 
 ### Added
 
-- Creación de la rama `feature/cuarta-entrega` y su Pull Request asociada (PR #8) para simular el flujo de entrega correcto de la Unidad 4.
-- **Nota:** La funcionalidad de la Unidad 4 ya había sido implementada y entregada como parte del Segundo Parcial (v2.0.0). Esta entrada refleja la acción de corregir el flujo de trabajo de Git, **debido a la observación del profesor de que `develop` no tenía los últimos cambios de la cuarta entrega mergeados al momento de crear la rama `release/segundo-parcial`**.
+* Creación de la rama `feature/cuarta-entrega` y su Pull Request asociada (PR #8) para simular el flujo de entrega correcto de la Unidad 4.
+* **Nota:** La funcionalidad de la Unidad 4 ya había sido implementada y entregada como parte del Segundo Parcial (v2.0.0). Esta entrada refleja la intencion de corregir el flujo de trabajo de Git, **debido a la observación del profesor de que `develop` no tenía los últimos cambios de la cuarta entrega mergeados al momento de crear la rama `release/segundo-parcial`**, no se hicieron modificaciones extra en esa rama.
 
 ### Changed
 
-- N/A
+* N/A
 
 ### Fixed
 
-- N/A
+* N/A
 
-## 2.0.0 - 2025-06-26 (Segundo Parcial)
+## 2.0.0 - 26/06/2025 (Segundo Parcial)
 
 ### Sprint learnings
 
-- Aprendimos a integrar librerías JavaScript externas para funcionalidades específicas.
-- Profundizamos en el manejo asíncrono de datos con AJAX, JSON, promises y fetch.
-- Implementamos el uso de funciones de orden superior para el recorrido de colecciones.
-- **Se abordaron los requisitos de la Unidad 4 (JSON, Storage, DOM y Eventos) directamente en esta entrega, sin una entrega previa dedicada para la "Cuarta Entrega", lo que generó observaciones en el flujo de Git.**
+* Aprendimos a integrar librerías JavaScript externas para funcionalidades específicas.
+* Profundizamos en el manejo asíncrono de datos con AJAX, JSON, promises y fetch.
+* Implementamos el uso de funciones de orden superior para el recorrido de colecciones.
+* **Se abordaron los requisitos de la Unidad 4 (JSON, Storage, DOM y Eventos) directamente en esta entrega, sin una entrega previa dedicada para la "Cuarta Entrega", lo que generó observaciones en el flujo de Git.**
 
 ### Added
 
-- Implementación de funcionalidad asíncrona para la obtención y uso de datos (AJAX, JSON, promises, fetch).
-- Consumo de APIs externas o uso de archivos JSON estáticos para cargar información.
-- Recorrido óptimo de colecciones con funciones de orden superior (map, filter, reduce).
-- Captura de entradas de usuario mediante inputs y eventos adecuados.
-- Salidas coherentes con las entradas presentadas de forma asíncrona en el HTML.
-- Incorporación de al menos una librería JavaScript externa para una funcionalidad específica.
-- **Funcionalidad de la Unidad 4 (JSON, Storage, DOM y Eventos) integrada:**
-    - Implementación de flujos de trabajo con entrada, proceso y salida interactiva.
-    - Captura de entradas de usuario mediante eventos (evitando `prompt()` y `alert()`).
-    - Modificación del DOM para salidas en HTML.
-    - Control de ingreso de entradas y coherencia en las salidas.
-    - Almacenamiento y recuperación de datos relevantes en `localStorage` o `sessionStorage`.
-    - Diagrama de clases para representar la estructura de objetos del simulador.
+* Implementación de funcionalidad asíncrona para la obtención y uso de datos (AJAX, JSON, promises, fetch).
+* Consumo de APIs externas o uso de archivos JSON estáticos para cargar información.
+* Recorrido óptimo de colecciones con funciones de orden superior (map, filter, reduce).
+* Captura de entradas de usuario mediante inputs y eventos adecuados.
+* Salidas coherentes con las entradas presentadas de forma asíncrona en el HTML.
+* Incorporación de al menos una librería JavaScript externa para una funcionalidad específica.
+* **Funcionalidad de la Unidad 4 (JSON, Storage, DOM y Eventos) integrada:**
+  * Implementación de flujos de trabajo con entrada, proceso y salida interactiva.
+  * Captura de entradas de usuario mediante eventos (evitando `prompt()` y `alert()`).
+  * Modificación del DOM para salidas en HTML.
+  * Control de ingreso de entradas y coherencia en las salidas.
+  * Almacenamiento y recuperación de datos relevantes en `localStorage` o `sessionStorage`.
+  * Diagrama de clases para representar la estructura de objetos del simulador.
 
 ### Changed
 
-- Correcciones y mejoras basadas en la retroalimentación del Primer Parcial.
-- Adaptación de la funcionalidad para el manejo de datos asíncronos.
+* Correcciones y mejoras basadas en la retroalimentación del Primer Parcial.
+* Adaptación de la funcionalidad para el manejo de datos asíncronos.
 
 ### Fixed
 
-- Correcciones de errores identificados en las pre-entregas de las Unidades 3 y 4.
+* Correcciones de errores identificados en las pre-entregas de la unidad 3.
 
 ## 1.0.3 - 2025-05-12 (Tercera Entrega)
 
