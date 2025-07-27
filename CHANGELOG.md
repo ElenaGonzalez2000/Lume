@@ -1,49 +1,10 @@
 # Changelog
 
-## 2.0.2 - 27/07/2025 (Correcciones Segundo Parcial)
+## 27/07/2025 - Segundo Parcial
 
-### Sprint learnings
+### Pull Request
 
-* Reforzamos la importancia de seguir el flujo de ramas establecido y la gestión de correcciones post-entrega.
-* **Aprendimos la importancia de mantener la rama `develop` actualizada con todas las entregas previas antes de crear ramas de `release` para parciales, para asegurar un flujo de revisión adecuado.**
-
-### Added
-
-* Implementación de correcciones solicitadas para el Segundo Parcial.
-* **Creación de una plantilla (template) de Pull Request en el repositorio para estandarizar las solicitudes de revisión.**
-
-### Changed
-
-* N/A
-
-### Fixed
-
-* Errores y observaciones identificadas en la entrega inicial del Segundo Parcial, incluyendo:
-
-  * **Corrección del formato y contenido del archivo `CHANGELOG.md` según las observaciones.**
-  * **Resolución de la falta de presentación de la cuarta entrega para revisión previa.**
-  * **Revisión de la carga asíncrona de datos para asegurar que la información estática (preguntas) también pueda cargarse desde un JSON.**
-
-## 1.1.1 - 26/07/2025 (Corrección de Flujo - Creación tardía de feature/cuarta-entrega)
-
-### Sprint learnings
-
-* Se comprendió la importancia de adherirse al flujo de trabajo de ramas desde el inicio para evitar inconsistencias.
-
-### Added
-
-* Creación de la rama `feature/cuarta-entrega` y su Pull Request asociada (PR #8) para simular el flujo de entrega correcto de la Unidad 4.
-* **Nota:** La funcionalidad de la Unidad 4 ya había sido implementada y entregada como parte del Segundo Parcial (v2.0.0). Esta entrada refleja la intencion de corregir el flujo de trabajo de Git, **debido a la observación del profesor de que `develop` no tenía los últimos cambios de la cuarta entrega mergeados al momento de crear la rama `release/segundo-parcial`**, no se hicieron modificaciones extra en esa rama.
-
-### Changed
-
-* N/A
-
-### Fixed
-
-* N/A
-
-## 2.0.0 - 26/06/2025 (Segundo Parcial)
+*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/7)
 
 ### Sprint learnings
 
@@ -51,6 +12,9 @@
 * Profundizamos en el manejo asíncrono de datos con AJAX, JSON, promises y fetch.
 * Implementamos el uso de funciones de orden superior para el recorrido de colecciones.
 * **Se abordaron los requisitos de la Unidad 4 (JSON, Storage, DOM y Eventos) directamente en esta entrega, sin una entrega previa dedicada para la "Cuarta Entrega", lo que generó observaciones en el flujo de Git.**
+* Reforzamos la importancia de seguir el flujo de ramas establecido y la gestión de correcciones post-entrega.
+* Aprendimos la importancia de mantener la rama `develop` actualizada con todas las entregas previas antes de crear ramas de `release` para parciales, para asegurar un flujo de revisión adecuado.
+* Se comprendió la importancia de adherirse al flujo de trabajo de ramas desde el inicio para evitar inconsistencias.
 
 ### Added
 
@@ -67,6 +31,10 @@
   * Control de ingreso de entradas y coherencia en las salidas.
   * Almacenamiento y recuperación de datos relevantes en `localStorage` o `sessionStorage`.
   * Diagrama de clases para representar la estructura de objetos del simulador.
+  * Implementación de correcciones solicitadas para el Segundo Parcial.
+  * Creación de una plantilla (template) de Pull Request en el repositorio para estandarizar las solicitudes de revisión.
+  * Creación de la rama `feature/cuarta-entrega` para simular el flujo de entrega correcto de la Unidad 4.
+    *   **Nota:** La funcionalidad de la Unidad 4 ya había sido implementada y entregada como parte del Segundo Parcial. Esta entrada refleja la intención de corregir el flujo de trabajo de Git, debido a la observación del profesor de que `develop` no tenía los últimos cambios de la cuarta entrega mergeados al momento de crear la rama `release/segundo-parcial`, no se hicieron modificaciones extra en esa rama.
 
 ### Changed
 
@@ -75,9 +43,17 @@
 
 ### Fixed
 
-* Correcciones de errores identificados en las pre-entregas de la unidad 3.
+*   Correcciones de errores identificados en las pre-entregas de la unidad 3.
+*   Errores y observaciones identificadas en la entrega inicial del Segundo Parcial, incluyendo:
+    *   Corrección del formato y contenido del archivo `CHANGELOG.md` según las observaciones.
+    *   Resolución de la falta de presentación de la cuarta entrega para revisión previa.
+    *   Revisión de la carga asíncrona de datos para asegurar que la información estática (preguntas) también pueda cargarse desde un JSON.
 
-## 1.0.3 - 2025-05-12 (Tercera Entrega)
+## 12/05/2025 - Tercera Entrega
+
+### Pull Request
+
+*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/4)
 
 ### Sprint learnings
 
@@ -105,7 +81,11 @@
 
 - Resolución de conflictos de merge durante el backport.
 
-## 1.0.2 - 2025-04-23 (Primer Parcial)
+## 23/04/2025 - Primer Parcial
+
+### Pull Request
+
+*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/3)
 
 ### Sprint learnings
 
@@ -131,7 +111,11 @@
 
 - Correcciones de errores identificados en las pre-entregas.
 
-## 1.0.1 - 2025-04-14 (Segunda Entrega)
+## 14/04/2025 - Segunda Entrega
+
+### Pull Request
+
+*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/2)
 
 ### Sprint learnings
 
@@ -157,7 +141,11 @@
 
 - Correcciones de errores identificados en la primera entrega.
 
-## 1.0.0 - 2025-03-31 (Primera Entrega)
+## 31/03/2025 - Primera Entrega
+
+### Pull Request
+
+*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/1)
 
 ### Sprint learnings
 
@@ -174,11 +162,3 @@
 - Creación de ramas `master` y `develop` en el repositorio.
 - Creación de la rama `feature/primera-entrega` y habilitación de GitHub Pages.
 - Descripción detallada del proyecto en `README.md` (título, descripción, objetivos, tecnologías, funcionalidades, maqueta de diseño).
-
-### Changed
-
-- N/A
-
-### Fixed
-
-- N/A
