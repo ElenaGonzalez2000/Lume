@@ -4,7 +4,7 @@
 
 ### Pull Request
 
-*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/9)
+*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/10)
 
 ### Sprint learnings
 
