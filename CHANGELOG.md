@@ -1,5 +1,28 @@
 # Changelog
 
+## 27/07/2025 - Entrega Final del Proyecto
+
+### Pull Request
+
+*   [Link de la Pull Request](https://github.com/ElenaGonzalez2000/Lume/pull/10)
+
+### Sprint learnings
+
+- Consolidamos todo lo trabajado durante la cursada en una versión final funcional.
+- Se integraron correcciones y mejoras generales de UX/UI.
+- Implementamos una actividad con contenido de frameworks modernos (React y Vue).
+
+### Added
+
+- Página de error 404 para rutas no existentes.
+- Validación visual al newsletter usando Toastify.
+- Archivo anexo explicativo sobre React, Vue y comparación con JS puro.
+- Refactor visual en botones con clases activas para los filtros.
+- Nuevos estilos para filtros activos.
+
+### Changed
+- Se actulizo la informacion de la tabla para que concuerde con los productos de la tienda.
+
 ## 27/07/2025 - Segundo Parcial
 
 ### Pull Request

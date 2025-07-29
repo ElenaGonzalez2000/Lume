@@ -109,6 +109,11 @@ filtros.forEach((boton) => {
     } else if (texto.includes("$10.000")) {
       resultados = catalogo.filtrarPorRangoPrecio(10000, 20000);
     }
+
+    // funcionalidad para que los filtros seleccionados queden activos con distintos estilos 
+    filtros.forEach(b => b.classList.remove("filtro-activo"));
+    boton.classList.add("filtro-activo");
+
     renderizarCatalogo(resultados);
   });
 });
@@ -136,6 +141,7 @@ ordenarDesc.addEventListener("click", () => {
 // limpiar filtros o busqueda
 btnLimpiar.addEventListener("click", () => {
   inputBuscar.value = "";
+  filtros.forEach(b => b.classList.remove("filtro-activo")); // limpia estilos
   renderizarCatalogo(catalogo.mostrarCatalogo());
 });
 
@@ -341,3 +347,21 @@ function mostrarResultado(tipo) {
 
 // inicializamos
 renderizarPreguntas();
+
+// Newsletter, verificacion y muestra de alerta con Toastify
+
+const formNewsletter = document.querySelector("#formNewsletter");
+const inputNewsletter = document.querySelector("#inputNewsletter");
+
+formNewsletter.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const email = inputNewsletter.value.trim();
+
+  if(email === "" || !email.includes("@") || !email.includes(".")) {
+    mostrarToast("Por favor, ingresa un mail valido", "#cd3545");
+    return;
+  }
+
+  mostrarToast("Gracias por suscribirte!", "#6a8f7a");
+  formNewsletter.reset();
+});

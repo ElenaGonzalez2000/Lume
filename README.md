@@ -43,18 +43,24 @@ Proyecto Universitario para la materia: **Programación Web I**.
 ```
 📁 api
   └── catalogo.json
+  └── preguntas.json
 📁 assets
   ├── 📁 images
   ├── 📁 js
   │   ├── carrito.js
   │   ├── catalogo.js
   │   ├── main.js
-  │   ├── preguntas.js
+  │   ├── pregunta.js
   │   ├── producto.js
   │   └── testPiel.js
   └── 📁 styles
+📁 docs
+  ├── anexos.md
+  └── frameworkVue.md
+  └── frameworkReact.md
 📁 pages
-  ├── contacto.html
+  ├── 404.html
+  └── contacto.html
   └── nosotros.html
 index.html
 README.md
@@ -74,3 +80,9 @@ El siguiente diagrama representa el algoritmo principal de la logica de compra.
 ### Diagrama de Clases
 
 [Ver Diagrama](./assets/images/uml.png)
+
+---
+
+## Anexos
+
+- [Anexo - Framekowrs y Node JS](./docs/anexos.md)
